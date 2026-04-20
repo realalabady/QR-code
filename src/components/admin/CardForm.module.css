@@ -1,0 +1,184 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.error {
+  background: #fee2e2;
+  color: #b91c1c;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+}
+
+.section {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.sectionTitle {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #6366f1;
+  margin: 0 0 0.25rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem;
+}
+
+@media (max-width: 500px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #444;
+}
+
+.input {
+  padding: 0.55rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.15s;
+  background: #fafafa;
+}
+
+.input:focus {
+  border-color: #6366f1;
+  background: #fff;
+}
+
+.phonesSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.phoneLabel {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #444;
+}
+
+.phoneRow {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.removePhone {
+  background: #fee2e2;
+  color: #b91c1c;
+  border: none;
+  border-radius: 6px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.addPhone {
+  align-self: flex-start;
+  background: none;
+  border: 1px dashed #d1d5db;
+  color: #6366f1;
+  border-radius: 6px;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.addPhone:hover {
+  background: #ede9fe;
+}
+
+.fileInput {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.uploading {
+  font-size: 0.8rem;
+  color: #6366f1;
+}
+
+.preview {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e5e7eb;
+  margin-top: 0.4rem;
+}
+
+.previewLogo {
+  width: 100px;
+  height: 50px;
+  object-fit: contain;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  margin-top: 0.4rem;
+  background: #f9fafb;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+.cancelButton {
+  padding: 0.7rem 1.4rem;
+  background: transparent;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  color: #555;
+}
+
+.cancelButton:hover {
+  background: #f3f4f6;
+}
+
+.saveButton {
+  padding: 0.7rem 1.8rem;
+  background: #6366f1;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.saveButton:hover:not(:disabled) {
+  background: #4f46e5;
+}
+
+.saveButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
