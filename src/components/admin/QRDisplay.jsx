@@ -25,8 +25,14 @@ export default function QRDisplay({ slug, name, size = 180 }) {
           size={size}
           bgColor="#ffffff"
           fgColor="#111111"
-          level="M"
+          level="H"
           includeMargin
+          imageSettings={{
+            src: "/Cypher horizen.png",
+            height: Math.round(size * 0.22),
+            width: Math.round(size * 0.22),
+            excavate: true,
+          }}
         />
       </div>
       {size > 120 && (
