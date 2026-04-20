@@ -26,6 +26,12 @@ function slugify(str) {
     .replace(/^-+|-+$/g, "");
 }
 
+function uniqueSlug(name) {
+  const base = slugify(name);
+  const suffix = Math.random().toString(36).slice(2, 7); // 5-char random e.g. "a3k9x"
+  return `${base}-${suffix}`;
+}
+
 export default function CardForm({ initialData, onSave }) {
   const navigate = useNavigate();
   const [form, setForm] = useState(initialData || EMPTY);
@@ -37,7 +43,7 @@ export default function CardForm({ initialData, onSave }) {
   // Auto-generate slug from name only when creating a new card
   useEffect(() => {
     if (!initialData && form.name) {
-      setForm((prev) => ({ ...prev, slug: slugify(form.name) }));
+      setForm((prev) => ({ ...prev, slug: uniqueSlug(form.name) }));
     }
   }, [form.name, initialData]);
 
