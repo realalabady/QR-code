@@ -7,6 +7,8 @@ export function downloadVCard(card) {
     "BEGIN:VCARD",
     "VERSION:3.0",
     `FN:${card.name || ""}`,
+    `N:${(card.name || "").split(" ").slice(1).join(" ")};${(card.name || "").split(" ")[0]};;;`,
+
     card.job_title ? `TITLE:${card.job_title}` : "",
     card.company ? `ORG:${card.company}` : "",
     card.email ? `EMAIL:${card.email}` : "",
